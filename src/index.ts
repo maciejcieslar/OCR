@@ -1,6 +1,6 @@
 import tesseract from 'tesseract.js';
 
-(tesseract as any).workerOptions.workerPath = 'http://localhost:8080/worker.min.js';
+(tesseract as any).workerOptions.workerPath = 'worker.min.js';
 
 const setImageSrc = (image: HTMLImageElement, imageFile: File) => {
   return new Promise((resolve, reject) => {
