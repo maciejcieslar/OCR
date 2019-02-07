@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OCR</title>
+
+    <style>
+      #labeled-image {
+        position: relative;
+      }
+
+      #original-image {
+        margin-right: 20px;
+      }
+
+      #file-recognition-images div {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="recognition-image-input">Choose image</label>
+    <input type="file" accept="image/jpeg, image/png" id="recognition-image-input" /><br />
+    <label for="recognition-confidence-input">Confidence</label>
+    <input type="number" max="100" min="0" id="recognition-confidence-input" value="70" /><br />
+
+    <label for="recognition-progress">File recognition progress:</label>
+    <progress id="recognition-progress" max="100" value="0">0%</progress>
+
+    <div id="recognition-text"></div>
+
+    <div id="recognition-images">
+      <div id="original-image"></div>
+      <div id="labeled-image"></div>
+    </div>
+
+    <script src="./bundle.js"></script>
+  </body>
+</html>
